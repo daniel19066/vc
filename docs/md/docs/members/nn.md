@@ -1,4 +1,4 @@
-# Daniel A. Pallares
+# Daniel Alejandro Pallares Rubio
 
 ## Bio
 
