@@ -1,4 +1,4 @@
-# Daniel Pallares
+# Daniel A. Pallares
 
 ## Bio
 
