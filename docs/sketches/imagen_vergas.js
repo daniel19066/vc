@@ -3,7 +3,7 @@
 function setup() {
   createCanvas(512, 512);
 
-  let img = createImg("/vc/docs/sketches/lenna.png");;
+  let img = createImg("/vc/docs/sketches/lenna.png");
   img.hide(); // hide the image in the browser
   frameRate(1);
 }
