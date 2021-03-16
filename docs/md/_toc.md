@@ -20,4 +20,7 @@
 
 > :Collapse label=Members
 > 
-> [NN](/docs/members/nn)
+> [Daniel Pallares](/docs/members/Daniel_pallares)
+> [Mateo Barragan](/docs/members/Mateo)
+> [Juan Cristancho](/docs/members/juan)
+> [Cesar Velasco](/docs/members/Cesar)
