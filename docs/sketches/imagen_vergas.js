@@ -10,7 +10,6 @@ function setup() {
   // helper for writing color to array
 
   function draw() {
-      writeColor(img)
       image(img, 0, 0, width, height);
   }
 
