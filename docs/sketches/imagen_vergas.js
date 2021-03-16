@@ -10,6 +10,7 @@ function setup() {
 
   function draw() {
         writeColor(img);
+        console.log(img.height)
       image(img, 0, 0, width, height);
   }
 
