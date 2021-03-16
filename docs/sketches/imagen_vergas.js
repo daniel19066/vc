@@ -1,9 +1,9 @@
 
-
+let img;
 function setup() {
   createCanvas(512, 512);
 
-  let img = createImg("/vc/docs/sketches/lenna.png");
+  img = createImg("/vc/docs/sketches/lenna.png");
 
 }
   // helper for writing color to array
