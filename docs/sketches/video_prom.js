@@ -1,15 +1,16 @@
+let fingers;
+
 function setup() {
-  createCanvas(512, 512);
-  img=createImg( '/vc/docs/sketches/lenna.png', 'fotito' );
-  
- 
+  createCanvas(320, 240);
+  // specify multiple formats for different browsers
+  fingers = createVideo(['/vc/docs/sketches/fingers.mov', '/vc/docs/sketches/fingers.webm'],0,240);
+  fingers.hide();// by default video shows up in separate dom
+  // element. hide it and draw it to the canvas
+  // instead
 }
 
-
 function draw() {
-
- image(img, 0 , 0);
-
+  image(fingers, 0, 0); // draw the video frame to canvas
   loadPixels();
   for (var y = 0; y < height*4; y++) {
             for (var x = 0; x < width; x++) {
@@ -26,7 +27,9 @@ function draw() {
         }
       }
       updatePixels();
+
 }
 
-
-  
+function mousePressed() {
+  fingers.loop(); // set the video to loop and start playing
+}
