@@ -1,15 +1,13 @@
 function setup() {
   createCanvas(512, 512);
   img=createImg( '/vc/docs/sketches/lenna.png', 'fotito' );
-  
  
 }
 
 
 function draw() {
 
- image(img, 0 , 0);
-
+ image(img, 0 , 0); 
   loadPixels();
   for (var y = 0; y < height*4; y++) {
             for (var x = 0; x < width; x++) {
@@ -26,6 +24,7 @@ function draw() {
         }
       }
       updatePixels();
+
 }
 
 
