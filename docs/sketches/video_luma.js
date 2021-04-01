@@ -28,8 +28,6 @@ function draw() {
         }
         updatePixels();
 
-        
-
 }
 
 function mousePressed() {
