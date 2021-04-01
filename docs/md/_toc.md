@@ -18,9 +18,11 @@
 > [Libs](/docs/snippets/lib)
 > [Sound](/docs/snippets/sound)
 
-> :Collapse label=Members
+> :Collapse label=Team
 > 
+
 > [Daniel Pallares](/docs/members/Daniel_pallares)
 > [Mateo Barragan](/docs/members/Mateo)
 > [Juan Cristancho](/docs/members/juan)
 > [Cesar Velasco](/docs/members/Cesar)
+
