@@ -33,4 +33,9 @@ ascii art:
 
 > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/videoConv.js, width=710, height=700
 
+### Mosaico
+
+> :P5 lib1=https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.min.js, sketch=/docs/sketches/mosaic.js, width=800, height=570
+
+
 > :ToCPrevNext
