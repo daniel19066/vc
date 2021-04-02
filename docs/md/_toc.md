@@ -21,8 +21,8 @@
 > :Collapse label=Team
 > 
 
-> [Daniel Pallares](/docs/members/Daniel_pallares)
-> [Mateo Barragan](/docs/members/Mateo)
-> [Juan Cristancho](/docs/members/juan)
-> [Cesar Velasco](/docs/members/Cesar)
+> [Daniel Pallares](/docs/team/Daniel_pallares)
+> [Mateo Barragan](/docs/team/Mateo)
+> [Juan Cristancho](/docs/team/juan)
+> [Cesar Velasco](/docs/team/Cesar)
 
