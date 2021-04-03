@@ -13,7 +13,7 @@
 actualmente no he participado en nigun paper o contribuido en un proyecto de software abierto
 
 ## Hobbies
-videojuegos, cine , series, anime y algun que oro contenido de youtube de entretenimiento
+videojuegos, cine , series, anime y algun que otro contenido de youtube de entretenimiento
 
 ## ilusión óptica
 ### Ilusión de ponzo
