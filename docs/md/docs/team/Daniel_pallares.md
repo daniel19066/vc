@@ -25,4 +25,8 @@ Como se puede observar en la siguiente figura al dibujar lineas horizontales , s
 ### Explicación
 Una de las explicaciones para la ilusión de Ponzo es la "hipótesis de la perspectiva ", que afirma que el efecto de perspectiva en la figura es producido por las líneas convergentes, normalmente asociadas con la percepción de la distancia. Esto es, cuando dos líneas oblicuas aparentan converger hacia el horizonte o un punto de fuga, se asocian subconscientemente con la visión en perspectiva de dos líneas paralelas que se alejan del espectador. Otra explicación se basa en la "hipótesis del efecto de enmarcado", que sostiene que la diferencia en la separación de las líneas horizontales situadas entre las dos líneas convergentes puede determinar, o al menos contribuir a reforzar, la magnitud de la distorsión.
 
+### Bibliografía 
+-https://es.wikipedia.org/wiki/Ilusi%C3%B3n_de_Ponzo
+-De Tony Philips, National Aeronautics and Space Adm. - NASA - Summer Moon Illusion (image link), Dominio público, https://commons.wikimedia.org/w/index.php?curid=1211098
+
 > :ToCPrevNext
