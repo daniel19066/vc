@@ -19,8 +19,7 @@
 > [Sound](/docs/snippets/sound)
 
 > :Collapse label=Team
-> 
-
+>
 > [Daniel Pallares](/docs/team/Daniel_pallares)
 > [Mateo Barragan](/docs/team/Mateo)
 > [Juan Cristancho](/docs/team/juan)
