@@ -2,9 +2,12 @@
 
 > :Collapse label=Workshops
 > 
-> [Imaging & Video](/docs/workshops/imaging)
+> > :Collapse label=Imaging & Video
+> >
+> > [Software](/docs/workshops/imaging)
+> > [Hardware](/docs/workshops/hardware)
+> 
 > [Rendering](/docs/workshops/rendering)
-> [Algovis](/docs/workshops/algovis)
 > [Computer Graphics](/docs/workshops/cg)
 > [HCI](/docs/workshops/hci)
 
@@ -17,6 +20,7 @@
 > [3D](/docs/snippets/3d)
 > [Libs](/docs/snippets/lib)
 > [Sound](/docs/snippets/sound)
+> [Formulae](/docs/snippets/formulae)
 
 > :Collapse label=Team
 >
