@@ -4,9 +4,11 @@
 > 
 > > :Collapse label=Imaging & Video
 > >
-> > [Software](/docs/workshops/imaging)
-> > [Hardware](/docs/workshops/hardware)
-> 
+> > [Escala de grices](/docs/workshops/img&Video/grices)
+> > [Ascii art](/docs/workshops/img&Video/Ascii)
+> > [Convolucion](/docs/workshops/img&Video/convolucion)
+> > [Mosaico](/docs/workshops/img&Video/mosaico)
+>
 > [Rendering](/docs/workshops/rendering)
 > [Computer Graphics](/docs/workshops/cg)
 > [HCI](/docs/workshops/hci)

@@ -19,23 +19,4 @@ video con promedio luma(HDTV)
 
 > :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/video_luma.js, width=320, height=240
 
-ascii art:
-
-> :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js,lib2=https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js, sketch=/docs/sketches/imagen_vergas.js, width=1000, height=1000
-
-## Convolucion
-
-### Convolucion de imagen
-
-> :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/conv.js, width=512, height=512
-
-### Convolucion de video
-
-> :P5 lib1=https://unpkg.com/ml5@latest/dist/ml5.min.js, sketch=/docs/sketches/videoConv.js, width=710, height=700
-
-### Mosaico
-
-> :P5 lib1=https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.min.js, sketch=/docs/sketches/mosaic.js, width=800, height=570
-
-
 > :ToCPrevNext
