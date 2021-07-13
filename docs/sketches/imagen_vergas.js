@@ -5,7 +5,7 @@ const grayRamp = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/|()1{}[]?-_+~<>i!lI;:
 const rampLength = grayRamp.length;
 
 function preload() {
-  image = loadImage('/vc/docs/sketches/lenna.png');
+  image = loadImage('/vc/docs/sketches/lenna.png')
 }
 
 function setup() {
