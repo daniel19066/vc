@@ -9,7 +9,10 @@
 > > [Convolucion](/docs/workshops/img&Video/convolucion)
 > > [Mosaico](/docs/workshops/img&Video/mosaico)
 >
-> [Rendering](/docs/workshops/rendering)
+> > :Collapse label=render
+> >
+> > [Rendering](/docs/workshops/render/rendering)
+>
 > [Computer Graphics](/docs/workshops/cg)
 > [HCI](/docs/workshops/hci)
 
