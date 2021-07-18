@@ -12,6 +12,7 @@
 > > :Collapse label=render
 > >
 > > [Rendering](/docs/workshops/render/rendering)
+> > [Luz ambiental](/docs/workshop/render/light)
 >
 > [Computer Graphics](/docs/workshops/cg)
 > [HCI](/docs/workshops/hci)
