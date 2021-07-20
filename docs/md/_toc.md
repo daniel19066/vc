@@ -14,6 +14,7 @@
 > > [Rendering](/docs/workshops/render/rendering)
 > > [Luz ambiental](/docs/workshops/render/light)
 > > [Visibilidad](/docs/workshops/render/visibility)
+> > [Demo](/docs/workshops/render/baricentric_demo)
 >
 > [Computer Graphics](/docs/workshops/cg)
 > [HCI](/docs/workshops/hci)
