@@ -1,6 +1,3 @@
-var punto1 = { x: 100, y: 50, z: 0 }
-var punto2 = { x: 200, y: 200, z: 0 }
-var punto3 = { x: 200, y: 0, z: 0 }
 
 /* 
 | |x|y|z|
@@ -50,8 +47,8 @@ function en_triangulo(punto, A, B, C) {
     var u = calculate_triangle(A, punto, C) / triangulo_mayor;
     var v = calculate_triangle(B, punto, A) / triangulo_mayor;
     var w = calculate_triangle(C, punto, B)/ triangulo_mayor;
-    print(u+ " - " +v+ " - " +w);
-    print("suma = " + (u+v+w));
+    // print(u+ " - " +v+ " - " +w);
+    // print("suma = " + (u+v+w));
     return dentro_rango(u) && dentro_rango(v) && dentro_rango(w) && (u+v+w >= 0.9 && u+v+w <= 1.001);
 }
 
@@ -60,6 +57,41 @@ const ROWS = 20;
 const COLS = 20;
 const LENGTH = 10;
 var board, quadrille;
+let gui;
+
+let params = {
+    punto1_x: 0,
+    punto1_xMin:0,
+    punto1_xMax:400,
+    punto1_xStep: 1,
+
+    punto1_y: 0,
+    punto1_yMin:0,
+    punto1_yMax:400,
+    punto1_yStep: 1,
+
+    punto2_x: 100,
+    punto2_xMin:0,
+    punto2_xMax:400,
+    punto2_xStep: 1,
+
+    punto2_y: 100,
+    punto2_yMin:0,
+    punto2_yMax:400,
+    punto2_yStep: 1,
+
+    punto3_x: 100,
+    punto3_xMin:0,
+    punto3_xMax:400,
+    punto3_xStep: 1,
+
+    punto3_y: 10,
+    punto3_yMin:0,
+    punto3_yMax:400,
+    punto3_yStep: 1,
+
+}
+
 
 function rango_busqueda(v1, v2, v3) {
     let x_max = Math.max(v1.x, v2.x, v3.x);
@@ -73,10 +105,37 @@ function setup() {
     createCanvas(512, 512);
     board = createQuadrille(crear_matriz(400/LENGTH));
     background('#2e0e36');
-    var mapa = crear_quadrille_triangulo(punto1, punto2, punto3);
-    board = Quadrille.OR(board, mapa, 0, 0);
-    drawQuadrille(board, 0, 0, LENGTH, 1, 'magenta', true);
     // print(crear_matriz(20))
+    gui = createGui('Variables');
+    gui.addObject(params);
+
+    noLoop();
+}
+
+function draw(){
+    background('#2e0e36');
+    board = createQuadrille(crear_matriz(400/LENGTH));
+    var punto1 = {
+        x: params.punto1_x,
+        y: params.punto1_y,
+        z: 0,
+    }
+    var punto2 = {
+        x: params.punto2_x,
+        y: params.punto2_y,
+        z: 0,
+    }
+    var punto3 = {
+        x: params.punto3_x,
+        y: params.punto3_y,
+        z: 0,
+    }
+    var mapa = crear_quadrille_triangulo(punto1, punto2, punto3);
+    var rango = rango_busqueda(punto1, punto2, punto3);
+    var pos = range_to_matrix(rango);
+    board = Quadrille.OR(board, mapa, pos.row_min, pos.col_min);
+    drawQuadrille(board, 0, 0, LENGTH, 1, 'magenta', true);
+    
 }
 
 function crear_matriz(size) {
@@ -118,30 +177,30 @@ function centro_cuadrado(row, col) {
 
 function crear_quadrille_triangulo(v1,v2,v3) {
     var rango = rango_busqueda(v1,v2,v3);
-    print("rango");
-    print(rango);
+    // print("rango");
+    // print(rango);
     var posiciones = range_to_matrix(rango);
-    print("pos");
-    print(posiciones);
+    // print("pos");
+    // print(posiciones);
     var mapa = matriz_no_simetrica(
         posiciones.row_max - posiciones.row_min,
         posiciones.col_max - posiciones.col_min,
     );
-    print("mapa");
-    print(mapa);
+    // print("mapa");
+    // print(mapa);
     for (let row = posiciones.row_min; row < posiciones.row_max ; row++) {
         for (let col = posiciones.col_min; col < posiciones.col_max; col++) {
             if (en_triangulo(
                 centro_cuadrado(row, col),
                 v1,v2,v3
             )) {
-                print("centro");
-                print(centro_cuadrado(row,col));
-                mapa[row][col] = color('blue');
+                // print("centro");
+                // print(centro_cuadrado(row,col));
+                mapa[row- posiciones.row_min][col-posiciones.col_min] = color('blue');
             } else {
-                print("centro");
-                print(centro_cuadrado(row,col));
-                print("fuera");
+                // print("centro");
+                // print(centro_cuadrado(row,col));
+                // print("fuera");
             }
         }
     }
