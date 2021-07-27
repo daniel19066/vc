@@ -6,8 +6,8 @@ let om_on;
 
 function preload() {
     //Precargar imagen base y shaders
-    image = loadImage('/vc/docs/img/globos.jpg');
-    om = loadImage('/vc/docs/img/omkara.png');
+    image = loadImage('/vc/docs/sketches/mosaic/lion.jpg');
+    // om = loadImage('/vc/docs/img/omkara.png');
     mosaic = loadShader('/vc/docs/sketches/mosaico.vert', '/vc/docs/sketches/mosaico.frag');
 
     //Cargar imagenes de dataset para mosaico
@@ -50,14 +50,13 @@ function setup() {
     noStroke();
     //definir los shaders a usar
     shader(mosaic);
-    mosaic.setUniform('om', om);
-    //Mostrar en pantalla una casilla de verificación para intercambiar entre el mosaico y la imagen original
-    om_on = createCheckbox('Mosaic', false);
-    om_on.changed(() => mosaic.setUniform('om_on', om_on.checked()));
-    om_on.position(10, 10);
+    // mosaic.setUniform('om', om);
+    // //Mostrar en pantalla una casilla de verificación para intercambiar entre el mosaico y la imagen original
+    // om_on = createCheckbox('Mosaic', false);
+    // om_on.changed(() => mosaic.setUniform('om_on', om_on.checked()));
+    // om_on.position(10, 10);
     //Pasar imagenes a fragment shader
     mosaic.setUniform('img', image);
-    mosaic.setUniform('img0', img0);
     mosaic.setUniform('img1', img1);
     mosaic.setUniform('img2', img2);
     mosaic.setUniform('img3', img3);
@@ -70,6 +69,9 @@ function setup() {
     mosaic.setUniform('img10', img10);
     mosaic.setUniform('img11', img11);
     mosaic.setUniform('img12', img12);
+    mosaic.setUniform('img13', img13);
+    mosaic.setUniform('img14', img14);
+    mosaic.setUniform('img15', img15);
     
     //Mostrar en pantalla un deslizador para ajustar la resolución de la imagen y el mosaico a mostrar
     resolution = createSlider(10, 100, 30, 1);
