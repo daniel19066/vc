@@ -1,6 +1,6 @@
-# convolucion
-convolucion:
+# Mosaico
+Mosaico:
 
-> :P5 sketch=/docs/sketches/Hmosaico.js, width=512, height=512
+> :P5 sketch=/docs/sketches/Hmosaico.js, width=600, height=600
 
 > :ToCPrevNext
