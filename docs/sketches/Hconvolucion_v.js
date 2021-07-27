@@ -2,6 +2,10 @@ let theShader;
 let fingers;
 let reproduce = false;
 
+let maxFr=0;
+let frames=0;
+let i =0;
+
 const Blur_Kernel= [ 0.11, 0.11, 0.11 ,0.11, 0.11, 0.11, 0.11, 0.11, 0.11]; 
 let Border_Detection= [ -1.0, -1.0, -1.0 , -1.0,  8.0, -1.0 , -1.0, -1.0, -1.0  ];
 const Emboss= [ 1,  1,  0, 1,  0, -1 , 0,  -1,  -1]; 
@@ -12,35 +16,42 @@ let matrixCarrousel= [Blur_Kernel,Border_Detection,Emboss,Sharpe];
 let kernel = matrixCarrousel[0] ;
 
 function preload() {
- theShader = loadShader('/vc/docs/sketches/shader_conv.vert', '/vc/docs/sketches/conv.frag');
- fingers = createVideo(['/vc/docs/sketches/fingers.mov', '/vc/docs/sketches/fingers.webm']);
- fingers.hide();
+  theShader = loadShader('/vc/docs/sketches/shader_conv.vert', '/vc/docs/sketches/conv.frag');
+  fingers = createVideo(['/vc/docs/sketches/fingers.mov', '/vc/docs/sketches/fingers.webm']);
+  fingers.hide();
 }
 
 function setup() {
- createCanvas(640, 400, WEBGL);
- noStroke();
- textureMode(NORMAL); 
- shader(theShader);
- theShader.setUniform('texture', fingers);
- theShader.setUniform('texOffset',[1/fingers.width,1/fingers.height]);
- button=createButton('Change Kernel!');
- button.position(300,350);
- button.mousePressed(changeMatrix);
+  createCanvas(640, 400, WEBGL);
+  noStroke();
+  textureMode(NORMAL); 
+  shader(theShader);
+  theShader.setUniform('texture', fingers);
+  theShader.setUniform('texOffset',[1/fingers.width,1/fingers.height]);
+  button=createButton('Change Kernel!');
+  button.position(300,350);
+  button.mousePressed(changeMatrix);
+  frameRate(120);
 }
+
+
 function draw() {
- background(0);
 
- beginShape() 
- vertex(-width / 2, height / 2, 0, 0, 1);
- vertex(width / 2, height / 2, 0, 1, 1);
- vertex(width / 2, -height / 2, 0, 1, 0);
- vertex(-width / 2, -height / 2, 0, 0, 0);
- theShader.setUniform('kernel', kernel);
- endShape(CLOSE)
 
+
+  background(0);
+  
+  fingers.loop()
+  beginShape() 
+  vertex(-width / 2, height / 2, 0, 0, 1);
+  vertex(width / 2, height / 2, 0, 1, 1);
+  vertex(width / 2, -height / 2, 0, 1, 0);
+  vertex(-width / 2, -height / 2, 0, 0, 0);
+  theShader.setUniform('kernel', kernel);
+  endShape(CLOSE)
+  
 }
 function changeMatrix(){
- contador=(contador+1)%matrixCarrousel.length;
- kernel=matrixCarrousel[contador];
+  contador=(contador+1)%matrixCarrousel.length;
+  kernel=matrixCarrousel[contador];
 }
