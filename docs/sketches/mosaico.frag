@@ -37,35 +37,35 @@ void main() {
   vec4 imgTexel = texture2D(img, texCoord);
 
   float luma = imgTexel.r *0.299 + imgTexel.g * 0.587 +  imgTexel.b*0.114;
-    if(luma < 0.066 && luma >= 0.0){
+    if(luma < 0.066){
          gl_FragColor = texture2D(img15, cPos);
-    }else if(luma < 0.132 && luma >= 0.066){
+    }else if(luma < 0.132){
          gl_FragColor = texture2D(img2, cPos);
-    }else if(luma < 0.198 && luma >= 0.132){
+    }else if(luma < 0.198){
          gl_FragColor = texture2D(img3, cPos);
-    }else if(luma < 0.264 && luma >= 0.198){
+    }else if(luma < 0.264){
          gl_FragColor = texture2D(img4, cPos);
-    }else if(luma < 0.33 && luma >= 0.264){
+    }else if(luma < 0.33 ){
          gl_FragColor = texture2D(img5, cPos);
-    }else if(luma < 0.396 && luma >= 0.33){
+    }else if(luma < 0.396){
          gl_FragColor = texture2D(img6, cPos);
-    }else if(luma < 0.462 && luma >= 0.396){
+    }else if(luma < 0.462){
          gl_FragColor = texture2D(img7, cPos);
-    }else if(luma < 0.528 && luma >= 0.462){
+    }else if(luma < 0.528){
          gl_FragColor = texture2D(img8, cPos);
-    }else if(luma < 0.594 && luma >= 0.528){
+    }else if(luma < 0.594){
          gl_FragColor = texture2D(img9, cPos);
-    }else if(luma < 0.66 && luma >= 0.594){
+    }else if(luma < 0.66){
          gl_FragColor = texture2D(img10, cPos);
-    }else if(luma < 0.726 && luma >= 0.66){
+    }else if(luma < 0.726){
          gl_FragColor = texture2D(img11, cPos);
-    }else if(luma < 0.792 && luma >= 0.726){
+    }else if(luma < 0.792){
          gl_FragColor = texture2D(img12, cPos);
-    }else if(luma < 0.858 && luma >= 0.792){
+    }else if(luma < 0.858){
          gl_FragColor = texture2D(img13, cPos);
-    }else if(luma < 0.924 && luma >= 0.858){
+    }else if(luma < 0.924){
          gl_FragColor = texture2D(img14, cPos); 
-    }else if(luma <= 1.0 && luma >= 0.924){
+    }else if(luma <= 1.0){
          gl_FragColor = texture2D(img1, cPos);
     }
 }
