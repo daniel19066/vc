@@ -43,25 +43,17 @@ void main() {
    vec3 col = texture2D(tex, floor(pix/8.0)*8.0/resol).rgb;    
    // Calculo LUMA
    float gray = 0.3 * col.r + 0.59 * col.g + 0.11 * col.b;
+   // Máscaras a aplicar dependiendo del LUMA
    // n = codificación del caracter en entero
    // página para codificación de caracteres: http://thrill-project.com/archiv/coding/bitmap/
-   int n =  4096;                
-   if (gray > 0.1) n = 4096;     // .    
-   if (gray > 0.2) n = 6144;     //"
-   if (gray > 0.25) n = 65600;   // :
-   if (gray > 0.3) n = 135296;   //|
-   if (gray > 0.35) n = 332772;   // *
-   if (gray > 0.4) n = 15255086; // o
-   if (gray > 0.45) n =  463296;  //z
-   if (gray > 0.5) n = 18400814; //U
-   if (gray > 0.55) n = 15221262; //C
-   if (gray > 0.6) n = 16033071; //O
-   if (gray > 0.65) n = 23385164 // &
-   if (gray > 0.7) n = 15252014; //B 
-   if (gray > 0.75) n= 14989614;// 8
-   if (gray > 0.8) n = 13199452; // @
-   if (gray > 0.85) n = 11512810;// #
-   if (gray > 0.9) n= 16398526;
+   int n =  4096;                // .
+   if (gray > 0.2) n = 65600;    // :
+   if (gray > 0.3) n = 332772;   // *
+   if (gray > 0.4) n = 15255086; // o 
+   if (gray > 0.5) n = 23385164; // &
+   if (gray > 0.6) n = 15252014; // 8
+   if (gray > 0.7) n = 13199452; // @
+   if (gray > 0.8) n = 11512810; // #
 
    //Cálculo de separación entre caracteres
    vec2 p = mod(pix/4.0, 2.0) - vec2(1.0);
