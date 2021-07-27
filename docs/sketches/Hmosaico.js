@@ -39,22 +39,22 @@ function preload() {
     img26 = loadImage('/vc/docs/sketches/mosaic/color26.jpg');
     img27 = loadImage('/vc/docs/sketches/mosaic/color27.jpg');
 
-    
-    
 }
 
 function setup() {
-    //Crear canvas
     createCanvas(600, 600, WEBGL);
     textureMode(NORMAL);
     noStroke();
+
     //definir los shaders a usar
     shader(mosaic);
     mosaic.setUniform('om', om);
+    
     //Mostrar en pantalla una casilla de verificación para intercambiar entre el mosaico y la imagen original
     om_on = createCheckbox('Mosaic', false);
     om_on.changed(() => mosaic.setUniform('om_on', om_on.checked()));
     om_on.position(10, 10);
+
     //Pasar imagenes a fragment shader
     mosaic.setUniform('img', image);
     mosaic.setUniform('img0', img0);
@@ -72,6 +72,7 @@ function setup() {
     mosaic.setUniform('img12', img12);
     
     //Mostrar en pantalla un deslizador para ajustar la resolución de la imagen y el mosaico a mostrar
+    // Cambiar por la libreria que yo use, más bonito y facil.
     resolution = createSlider(10, 100, 30, 1);
     resolution.position(10, 50);
     resolution.style('width', '80px');
@@ -87,17 +88,19 @@ function draw() {
 
 function cover(texture = false) {
     beginShape();
+    let mitad_ancho = width / 2;
+    let mitad_largo = height / 2;
     if (texture) {
-        vertex(-width / 2, -height / 2, 0, 0, 0);
-        vertex(width / 2, -height / 2, 0, 1, 0);
-        vertex(width / 2, height / 2, 0, 1, 1);
-        vertex(-width / 2, height / 2, 0, 0, 1);
+        vertex(-mitad_ancho, -mitad_largo, 0, 0, 0);
+        vertex(mitad_ancho, -mitad_largo, 0, 1, 0);
+        vertex(mitad_ancho, mitad_largo, 0, 1, 1);
+        vertex(-mitad_ancho, mitad_largo, 0, 0, 1);
     }
     else {
-        vertex(-width / 2, -height / 2, 0);
-        vertex(width / 2, -height / 2, 0);
-        vertex(width / 2, height / 2, 0);
-        vertex(-width / 2, height / 2, 0);
+        vertex(-mitad_ancho, -mitad_largo, 0);
+        vertex(mitad_ancho, -mitad_largo, 0);
+        vertex(mitad_ancho, mitad_largo, 0);
+        vertex(-mitad_ancho, mitad_largo, 0);
     }
     endShape(CLOSE);
 }
