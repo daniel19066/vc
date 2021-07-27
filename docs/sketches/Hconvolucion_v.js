@@ -31,7 +31,7 @@ function setup() {
   button=createButton('Change Kernel!');
   button.position(300,350);
   button.mousePressed(changeMatrix);
-  frameRate(120);
+ 
 }
 
 
