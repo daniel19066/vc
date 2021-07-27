@@ -10,7 +10,7 @@ const Sharpe= [ 0, -1, 0 , -1,  5, -1, 0, -1, 0 ];
 let contador=0;
 let matrixCarrousel= [Blur_Kernel,Border_Detection,Emboss,Sharpe];
 let kernel = matrixCarrousel[0] ;
-//https://github.com/afsanchezsa/vc
+
 function preload() {
  theShader = loadShader('/vc/docs/sketches/shader_conv.vert', '/vc/docs/sketches/conv.frag');
  img = loadImage('/vc/docs/sketches/lenna.png');
