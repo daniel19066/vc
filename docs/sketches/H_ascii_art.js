@@ -9,7 +9,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1000, 500, WEBGL);
+  createCanvas(1000, 1000, WEBGL);
   shaderTexture = createGraphics(700, 800, WEBGL);
   shaderTexture.noStroke();
 }
@@ -20,6 +20,6 @@ function draw() {
 
   theShader.setUniform('tex', img);
   texture(shaderTexture);
-  shaderTexture.rect(0,0,500,500);
-  rect(-500,-500/2.0,500,500)
+  shaderTexture.rect(0,0,512,512);
+  rect(-512,-512/2.0,512,512)
 }
