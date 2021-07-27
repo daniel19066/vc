@@ -1,11 +1,11 @@
-let theShader;
+let sombras;
 let shaderTexture;
 let img;
-//https://computacionvisual2021.github.io/vc/docs/workshops/hardwareAscii
-//cambienlo pirobos o referenciemos a los compañeros para que no joda el profe
+
 function preload() {
   img = loadImage('/vc/docs/sketches/lenna.png');
-  theShader = loadShader('/vc/docs/sketches/ascii.vert', '/vc/docs/sketches/ascii.frag');
+  // ohhh bella lenna :3
+  sombras = loadShader('/vc/docs/sketches/ascii.vert', '/vc/docs/sketches/ascii.frag');
 }
 
 function setup() {
@@ -16,10 +16,13 @@ function setup() {
 
 function draw() {
 
-  shaderTexture.shader(theShader);
+  shaderTexture.shader(sombras);
 
-  theShader.setUniform('tex', img);
+  sombras.setUniform('tex', img);
+
   texture(shaderTexture);
+
   shaderTexture.rect(0,0,512,512);
+  
   rect(-512,-512/2.0,512,512)
 }
