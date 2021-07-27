@@ -4,10 +4,20 @@
 > 
 > > :Collapse label=Imaging & Video
 > >
-> > [Escala de grices](/docs/workshops/img&Video/grices)
-> > [Ascii art](/docs/workshops/img&Video/Ascii)
-> > [Convolucion](/docs/workshops/img&Video/convolucion)
-> > [Mosaico](/docs/workshops/img&Video/mosaico)
+> > > :Collapse label=Sofware
+> > >
+> > >
+> > > [Escala de grices](/docs/workshops/img&Video/grices)
+> > > [Ascii art](/docs/workshops/img&Video/Ascii)
+> > > [Convolucion](/docs/workshops/img&Video/convolucion)
+> > > [Mosaico](/docs/workshops/img&Video/mosaico)
+> >
+> > > :Collapse label=Hardware
+> > >
+> > > [Escala de grices](/docs/workshops/img&Video/hardware/Hgrices)
+> > > [Ascii art](/docs/workshops/img&Video/hardware/H_ascii)
+> > > [Convolucion](/docs/workshops/img&Video/hardware/Hconv)
+> > > [Mosaico](/docs/workshops/img&Video/mosaico)
 >
 > > :Collapse label=render
 > >
