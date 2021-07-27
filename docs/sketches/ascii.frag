@@ -45,7 +45,7 @@ void main() {
    float gray = 0.3 * col.r + 0.59 * col.g + 0.11 * col.b;
    // n = codificación del caracter en entero
    // página para codificación de caracteres: http://thrill-project.com/archiv/coding/bitmap/
-   int n =  0;                
+   int n =  4096;                
    if (gray > 0.1) n = 4096;     // .    
    if (gray > 0.2) n = 6144;     //"
    if (gray > 0.25) n = 65600;   // :
@@ -56,7 +56,7 @@ void main() {
    if (gray > 0.5) n = 18400814; //U
    if (gray > 0.55) n = 15221262; //C
    if (gray > 0.6) n = 16033071; //O
-   if (gray > 0.65) n = 23385164 // &
+   if (gray > 0.65) n = 23385164; // &
    if (gray > 0.7) n = 15252014; //B 
    if (gray > 0.75) n= 14989614;// 8
    if (gray > 0.8) n = 13199452; // @
