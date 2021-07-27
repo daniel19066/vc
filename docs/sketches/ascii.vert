@@ -1,5 +1,6 @@
 // vert file and comments from adam ferriss
 // https://github.com/aferriss/p5jsShaderExamples
+// del cual fue integramente robado
 
 #ifdef GL_ES
 precision mediump float;
